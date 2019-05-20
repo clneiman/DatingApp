@@ -11,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { RegisterComponent } from './components/register/register.component';
 
 import { AuthService } from './services/auth.service';
+import { ErrorInterceptorProvider } from './services/error.interceptor';
 
 @NgModule({
    declarations: [
@@ -26,7 +27,8 @@ import { AuthService } from './services/auth.service';
       FormsModule
    ],
    providers: [
-      AuthService
+      AuthService,
+      ErrorInterceptorProvider
    ],
    bootstrap: [
       AppComponent
