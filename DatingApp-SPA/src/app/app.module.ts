@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 // third party
 import { JwtModule } from '@auth0/angular-jwt';
 import { NgxGalleryModule } from 'ngx-gallery';
+import { FileUploadModule } from 'ng2-file-upload';
 import { BsDropdownModule, TabsModule } from 'ngx-bootstrap';
 
 // modules
@@ -23,6 +24,7 @@ import { MemberDetailComponent } from './components/members/member-detail/member
 import { MemberEditComponent } from './components/members/member-edit/member-edit.component';
 import { MemberListComponent } from './components/members/member-list/member-list.component';
 import { MessagesComponent } from './components/messages/messages.component';
+import { PhotoEditorComponent } from './components/members/photo-editor/photo-editor.component';
 
 // interceptors
 import { ErrorInterceptorProvider } from './services/error.interceptor';
@@ -57,7 +59,8 @@ export function tokenGetter() {
       MemberDetailComponent,
       MemberEditComponent,
       MemberListComponent,
-      MessagesComponent
+      MessagesComponent,
+      PhotoEditorComponent
    ],
    imports: [
       BrowserModule,
@@ -65,6 +68,7 @@ export function tokenGetter() {
       HttpClientModule,
       FormsModule,
       NgxGalleryModule,
+      FileUploadModule,
       BsDropdownModule.forRoot(),
       TabsModule.forRoot(),
       JwtModule.forRoot({
