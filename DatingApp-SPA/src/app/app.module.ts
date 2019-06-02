@@ -40,6 +40,7 @@ import { TimeAgoPipe } from 'time-ago-pipe';
 import { MemberDetailResolver } from './resolvers/member-detail.resolver';
 import { MemberListResolver } from './resolvers/member-list.resolver.';
 import { MemberEditResolver } from './resolvers/member-edit.resolver';
+import { ListsResolver } from './resolvers/lists.resolver';
 
 // services
 import { AlertifyService } from './services/alertify.service';
@@ -96,7 +97,8 @@ export function tokenGetter() {
       PreventUnsavedChangesGuard,
       MemberDetailResolver,
       MemberListResolver,
-      MemberEditResolver
+      MemberEditResolver,
+      ListsResolver
    ],
    bootstrap: [
       AppComponent
