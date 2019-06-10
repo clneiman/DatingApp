@@ -23,6 +23,7 @@ import { MemberCardComponent } from './components/members/member-card/member-car
 import { MemberDetailComponent } from './components/members/member-detail/member-detail.component';
 import { MemberEditComponent } from './components/members/member-edit/member-edit.component';
 import { MemberListComponent } from './components/members/member-list/member-list.component';
+import { MemberMessagesComponent } from './components/members/member-messages/member-messages.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { PhotoEditorComponent } from './components/members/photo-editor/photo-editor.component';
 
@@ -41,6 +42,7 @@ import { MemberDetailResolver } from './resolvers/member-detail.resolver';
 import { MemberListResolver } from './resolvers/member-list.resolver.';
 import { MemberEditResolver } from './resolvers/member-edit.resolver';
 import { ListsResolver } from './resolvers/lists.resolver';
+import { MessagesResolver } from './resolvers/messages.resolver';
 
 // services
 import { AlertifyService } from './services/alertify.service';
@@ -63,6 +65,7 @@ export function tokenGetter() {
       MemberDetailComponent,
       MemberEditComponent,
       MemberListComponent,
+      MemberMessagesComponent,
       MessagesComponent,
       PhotoEditorComponent,
       TimeAgoPipe
@@ -98,7 +101,8 @@ export function tokenGetter() {
       MemberDetailResolver,
       MemberListResolver,
       MemberEditResolver,
-      ListsResolver
+      ListsResolver,
+      MessagesResolver
    ],
    bootstrap: [
       AppComponent
